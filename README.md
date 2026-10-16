@@ -1,15 +1,18 @@
-# CS-300
-
-## Data Structures and Algorithms
-
-This repository contains coursework from CS 300: Data Structures and Algorithms.
-
-Throughout this course, I worked with different data structures and algorithms to solve programming problems efficiently. The projects in this repository demonstrate my ability to design, analyze, and implement solutions using C++.
-
-## Course Projects
-
-### Project One
-Analysis and design of data structures for an academic advising program.
-
-### Project Two
-A C++ advising assistance program that loads course information from a CSV file, stores the information in a data structure, sorts courses alphanumerically, and allows users to search for individual courses and their prerequisites.
+CS 300: Data Structures and Algorithms
+This repository contains selected work from CS 300. The projects focused on designing an academic advising program that could load course data, display a complete course list in alphanumeric order, and allow an advisor to look up an individual course and its prerequisites.
+What was the problem you were solving in the projects for this course?
+The main problem was deciding how to store and work with course information for an advising program. The program needed to read course data from a file, store the course number, title, and prerequisites, print all courses in alphanumeric order, and let a user search for a specific course. Project One focused on comparing possible data structures and designing the solution. Project Two turned that design into a working C++ program.
+How did you approach the problem? Why are data structures important to understand?
+I compared a vector, hash table, and binary search tree before deciding how I wanted to organize the course data. Each structure has different strengths. A vector is simple but can require scanning through every item to find a course. A hash table is very efficient for direct lookups but does not naturally keep the courses sorted. A binary search tree supports efficient searching and can produce sorted output with an in-order traversal, although its performance depends on how balanced the tree is.
+Working through these options helped me see that choosing a data structure is not just about storing data. The choice affects how much work the program has to do when searching, sorting, inserting, and displaying information.
+How did you overcome roadblocks you encountered?
+One of the main challenges was connecting the algorithm analysis from Project One to actual C++ code in Project Two. It was easy to describe a search or sort at a high level, but the implementation also had to handle file input, parsing, invalid data, prerequisites, and user input. I worked through the problem by separating the program into smaller functions for loading data, displaying the course list, and searching for a course. Testing the program with both valid and invalid input also helped identify problems before they affected the rest of the program.
+How has this work expanded your approach to designing software and developing programs?
+This course made me think more about the design of a program before writing the code. I now look at what operations a program will perform most often and consider which data structure makes those operations more efficient. I also pay more attention to runtime complexity instead of only checking whether the program produces the correct result.
+That approach applies beyond this project. A program may work correctly with several different designs, but one design can be easier to maintain, faster, or more scalable than another.
+How has this work evolved the way you write maintainable, readable, and adaptable programs?
+I have become more deliberate about separating responsibilities into functions, using descriptive names, validating input, and keeping the data model simple. In Project Two, the Course structure keeps the related course information together while separate functions handle loading, printing, and searching. This makes the program easier to follow and makes individual parts easier to change without rewriting the entire application.
+I also learned that readable code and efficient code are not competing goals. A clear design usually makes it easier to understand where the program is spending time and where a different algorithm or data structure would improve it.
+Portfolio Artifacts
+- Project One Runtime and Memory Analysis — Comparison of the vector, hash table, and binary search tree approaches considered for the advising program.
+- ProjectTwo.cpp — Working C++ advising program that loads the course file and prints the course list in alphanumeric order.
